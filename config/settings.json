@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer <YOUR_GITHUB_PAT>"
+      }
+    },
+    "google-developer-knowledge": {
+      "httpUrl": "https://developerknowledge.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "<YOUR_API_KEY>"
+      }
+    },
+    "Cloud-SQL-MCP-Server": {
+      "httpUrl": "https://sqladmin.googleapis.com/mcp",
+      "authProviderType": "google_credentials",
+      "oauth": {
+          "scopes": ["https://www.googleapis.com/auth/cloud-platform"]
+      },
+      "timeout": 30000,
+      "headers": {
+          "x-goog-user-project": "dcruley-demo-project"
+      }
+    },
+    "CloudRun-MCP-Server": {
+      "httpUrl": "https://run.googleapis.com/mcp",
+      "authProviderType": "google_credentials",
+      "oauth": {
+          "scopes": ["https://www.googleapis.com/auth/cloud-platform"]
+      },
+      "timeout": 30000,
+      "headers": {
+          "x-goog-user-project": "dcruley-demo-project"
+      }
+    },
+    "Logging-mcp-server": {
+      "httpUrl": "https://logging.googleapis.com/mcp",
+      "authProviderType": "google_credentials",
+      "oauth": {
+        "scopes": [
+          "https://www.googleapis.com/auth/logging.read"
+        ]
+      },
+      "timeout": 30000,
+      "headers": {
+        "x-goog-user-project": "dcruley-demo-project"
+      }
+    }
+  },
+  "telemetry": {
+    "enabled": true,
+    "target": "gcp"
+  },
+  "general": {
+    "previewFeatures": true,
+    "enableAutoUpdate": true
+  }
+}
