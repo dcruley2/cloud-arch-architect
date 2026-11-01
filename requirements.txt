@@ -1,0 +1,4 @@
+google-cloud-aiplatform[genai]
+google-cloud-storage
+vertexai
+cloudpickle
